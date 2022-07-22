@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifiriana</title>
+    <style>
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-image: url("hola.png");
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.contenedor{
+ padding: 60px 0;
+ width: 90%;
+ max-width: 1000px;
+ margin: auto;
+ overflow: hidden;
+}
+.titulo{
+    color: rgb(47, 109, 47);
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+header{
+    width: 100%;
+    height: 600px;
+    background: #43C6AC;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F8FFAE, #43C6AC);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(78, 56%, 57%, 0.521), hsla(120, 67%, 40%, 0.76)), url("zyro-image.png");
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+nav{
+    text-align: right;
+    padding: 50px 50px 0 0;
+
+}
+nav > a{
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+}
+nav > a:hover{
+    text-decoration: underline;
+    background-color: rgba(22, 185, 90, 0.788);
+}
+.textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.textos-header h1{
+    font-size: 50px;
+    color: rgb(255, 255, 255)
+}
+.textos-header h2{
+    font-size: 30px;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+main.sobre-nosotros{
+    padding: 30px 0 60px 0;
+}
+.contenedor-sobre-nosotros{
+    display: flex;
+    justify-content: space-evenly;
+}
+.imagen-about-us{
+    width: 48%;
+}
+.sobre-nosotros .contenido-textos{
+    width: 48%;
+}
+.contenido-textos h3{
+    margin-bottom: 15px;
+    color: rgb(43, 139, 86);
+}
+.contenido-textos h3 span{
+    background: rgb(57, 153, 100);
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    margin-right: 5px;
+}
+.contenido-textos p{
+    padding: 0px 0px 25px 10px;
+    font-weight: 300;
+    text-align: justify;
+    color: rgb(7, 80, 22);
+}
+
+.galeria-fases{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.imagen-fases{
+    width: 15%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
+}
+.imagen-fases > img{
+    width: 15%;
+    height: 15%;
+    object-fit: cover;
+    display: block;
+
+}
+h1{
+    margin: 0px;
+}
+.cajas{
+            background-color: rgba(37, 134, 45, 0.205);
+            width: 50%;
+            padding: 20px;
+            border-radius: 10px;
+            border: 5px solid rgb(31, 124, 88);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+p{
+    padding: 0px 0px 25px 10px;
+    font-weight: 300;
+    text-align: justify;
+    color: rgb(7, 80, 22);
+}
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+}
+.cards .card{
+    background: rgb(162, 196, 155);
+    display: flex;
+    width: 46%;
+    height: 200px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,0.6);
+}
+.cards .card img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    display: block;
+}
+.cards .card > .contenido-texto-card{
+    width: 60%;
+    color: rgb(255, 255, 255)
+}
+.cards .card > .contenido-texto-card p{
+    font-weight: 300;
+    padding-top: 5px;
+}
+.about-final-results{
+    background-color: rgba(117, 207, 109, 0.61);
+    padding-bottom: 30px;
+}
+.final-cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.resultado-1{
+    width: 28%;
+    text-align: center;
+}
+.resultado-1 img{
+    width: 90%;
+}
+.resultado-1 h3{
+    margin: 10px 0;
+    color: rgb(31, 124, 88)
+}
+.resultado-1 p{
+    font-weight: 300;
+    text-align: justify;
+    color:rgb(255,255,255)
+}
+footer{
+    background: rgb(78, 78, 78);
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+    border-bottom: 1px solid rgb(209, 209, 209);
+}
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+}
+.content-foo{
+    text-align: center;
+}
+.content-foo h4{
+    color: rgb(255, 255, 255);
+    border-bottom: 3px solid rgb(221, 145, 196);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.parrafos{
+    color: rgb(255, 255, 255)
+}
+.titulo-final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: rgb(175, 175, 175)
+}
+.video{
+    padding: 35px;
+}
+#canva{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.caja-video{
+    overflow: hidden;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    background: #43C6AC;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F8FFAE, #43C6AC);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(78, 56%, 57%, 0.521), hsla(120, 67%, 58%, 0.692)), url("zyro-image.png");
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.caja-1 .caja-2{
+    background-color: rgba(37, 134, 45, 0.205);
+            width: 50%;
+            padding: 20px;
+            border-radius: 10px;
+            border: 5px solid rgb(31, 124, 88);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 30px;
+}
+.caja-1 .caja-2 p{
+    font-weight: 300;
+    padding-top: 5px;
+    color: rgb(255, 255, 255)
+}
+
+@media screen and (max-width:900px){
+    header{
+        background-position: center;
+    }
+    .contenedor-sobre-nosotros{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .sobre-nosotros .contenido-textos{
+        width: 90%;
+    }
+    .imagen-about-us{
+        width: 90%;
+    }
+    .cards{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .cards .card{
+        width: 90%;
+    }
+    .cards .card:first-child{
+        margin-bottom: 30px;
+    }
+    .final-cont{
+        justify-content: center;
+        flex-direction: column;
+    }
+    .resultado-1{
+        width: 100%;
+        text-align: center;
+    }
+    .resultado-1:nth-child(1), .resultado-1:nth-child(2){
+        margin-bottom: 60px;
+    }
+    .resultado-1 img{
+        width: 90%;
+    }
+}
+@media screen and (max-width:500px){
+    nav{
+        text-align: center;
+        padding: 30px 0 0 0;
+    }
+    nav > a{
+        margin-right: 5px;
+    }
+    .textos-header h1{
+        font-size: 35px;
+    }
+    .textos-header h2{
+        font-size: 20px;
+    }
+    .imagen-about-us{
+        margin-bottom: 60px;
+        width: 99%;
+    }
+    .sobre-nosotros .contenido-textos{
+        width: 95%;
+
+    }
+    .cards .card{
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards .card img{
+        width: 90px;
+        height: 90px;
+    }
+    .contenedor-footer{
+        flex-direction: column;
+    }
+    .content-foo{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .content-foo h4{
+        border-bottom: none;
+    }
+    .content-foo p{
+        color: rgb(156, 156, 156);
+        border-bottom: 1px solid #f2f2f2;
+        padding-bottom: 20px;
+    }
+    .titulo-final{
+        font-size: 20px;
+    }
+    }
+
+    </style>
+    <link rel="shortcut icon" href= "Hoja.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+    <nav>
+        <a href="">Inicio</a>
+        <a href="#Acerca-de">Acerca de</a>
+        <a href="#Fases-del-desarrollo-del-proyecto">Fases del desarrollo del proyecto</a>
+        <a href="#Pruebas-del-producto">Pruebas del producto</a>
+        <a href="#Resultado-final">Resultado final</a>
+    </nav>
+    <section class="textos-header">
+        <h1>Descubre está nueva forma de ahorrar el agua</h1>
+        <h2>y a la vez de regar tus plantas :) ¡No te lo pierdas!</h2>
+        <div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150"
+            preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98
+            C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke:
+            none; fill: #a3ccc2;"></path></svg></div>
+    </section>
+    </header>
+    <main>
+        <section class="contenedor sobre-nosotros">
+        <a name="Acerca-de">
+        <h2 class="titulo">Nuestro proyecto</h2>
+        <div class="contenedor-sobre-nosotros">
+            <img src="la info.png" alt="" class="imagen-about-us">
+            <div class="contenido-textos">
+                <h3><span>1</span>¿Qué es?</h3>
+                <p>Nuestro proyecto es un sistema de autorriego, y está enfocado
+                    en no desperdiciar agua en comunidades y aprovecharla al máximo.</p>
+                    <h3><span>2</span>¿Cómo surgió la idea?</h3>
+                    <p>El agua es importante para todos los seres vivos del planeta,
+                        es un elemento indispensable que todos necesitamos para sobrevivir,
+                        y si la humanidad sigue desperdiciando el agua ya no habrá suficiente
+                        para todos en un futuro cercano.</p>
+                        <p>Existen muchas maneras en las que el ser humano desperdicia el agua, pero
+                            nos enfocamos en una en especial: Cuando riegas tus platas.</p>
+                            <p>Tal vez justo en este momento estas pensando que cuando riegas tus plantas
+                                estas dando un “buen uso” del agua al regar tus plantas ya que ayudan
+                                al medio ambiente y es imposible estar desperdiciando el agua…pues déjame decirte
+                                que si es posible. </p>
+                                <p>Regar tus plantas a pleno sol con altas temperaturas solo lograrás que el
+                                    agua se evapore y no llegue a tocar el suelo, o cuando eliges regar
+                                    tu planta cuando hay mucho viento el agua se ira por otro lado en vez
+                                    de llegar a tu planta, pero lo más importante es que sistema de riego
+                                    utilizaste, ya que de eso depende si hiciste un buen uso del agua y regaste
+                                    tu planta como se debe o no.</p>
+                                    <p>Gracias a esta observación, nació la idea de “Lifiriana”, un sistema de autorriego
+                                        que tiene dos objetivos:</p>
+                                        <p>Ahorrar el agua y regar tus plantas de la mejor manera.</p>
+                                        <h3><span>3</span>¿Por qué elegimos este tema?</h3>
+                                        <p>Se eligió ese método de autorriego porque la planta absorberá el agua únicamente
+                                            cuando lo necesite y evitaras desperdiciar el agua a la vez que tampoco consumirás
+                                            tu tiempo eligiendo la hora y el estado de clima que te favorecería para regar tu planta.</p>
+                                            <p>Otra de las razones por la cual se eligió este método de autorriego es porque no todas las
+                                                personas tienen suficiente tiempo para ocuparse de sus plantas o garantizar su cuidado
+                                                cuando se ausentan de su casa. Además, esto ayudará a las plantas a que se mantengan en
+                                                buenas condiciones y tengan más tiempo de vida debido a que ellas absorberán solo el agua
+                                                necesaria manteniendo la humedad constante.</p>
+                                        
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section class="about-final-results">
+        <div class="contenedor">
+            <a name="Fases-del-desarrollo-del-proyecto">
+            <h2 class="titulo">Fases del desarrollo del proyecto</h2>
+            <div class="final-cont">
+                <div class="resultado-1">
+                    <img src="plantarplantas.jpg" alt="">
+                    <h3>Fase 1</h3>
+                    <p>Plantamos las dos variables, las dos con las mismas condiciones.</p>
+                </div>
+                <div class="resultado-1">
+                    <img src="medirplanta.jpg" alt="">
+                    <h3>Fase 2</h3>
+                    <p>Empezamos a medir las dos plantas y a hacer el registro de investigación.</p>
+                </div>
+                <div class="resultado-1">
+                    <img src="hipotesis.jpg" alt="">
+                    <h3>Fase 3</h3>
+                    <p>Comprobamos nuestra hipótesis de que nuestro sistema de autorriego si sirve.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section class="fases">
+        <center>
+        <div class="cajas">
+            <a name="Pruebas-del-producto">
+            <h2 class="titulo">Pruebas del producto</h2>
+            <h3 id="canva">Presiona esta imágen para ver nuestras pruebas :)</h3>
+<a href ="https://www.canva.com/design/DAFE2WNEfIE/Dn_P-Ddub0XDFN4xRdCj0w/view"><img src="registro.png" width="650" alt="Paisaje" class="imagen-about-us"></a>
+            </div>
+        </center>
+        <hr>
+        </div>
+    </section>
+    <section class="pruebas contenedor">
+        <a name="Resultado-final">
+        <h2 class="titulo">Resultado final</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="regar-plantas-vacaciones-1.jpg" alt="">
+                <div class="contenido-texto-card">
+                    <p>Nuestro sistema de autorriego si funciona, tuvo mucho éxito. La planta que tenía nuestro sistema creció 1.9 cm más que la de regado normal ya que mantenía la tierra más húmeda y le llegaba más agua a las raíces. </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="regar-830x507.jpg" alt="">
+                <div class="contenido-texto-card">
+                    <h4>Gracias a este eficaz sistema de autorriego, se lograron los objetivos planeados:</h4>
+                    <ul>
+                        <li>Se ahorro el agua</li>
+                        <li>Creció más la planta</li>
+                        <li>Se cumplió la hipótesis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section class="video">
+        <h2 class="titulo">Vídeo</h2>
+        <center>
+        <img src="giphy-11.gif" alt="" width=300>
+    </center>
+       <center>
+        <div class="contenedor-video">
+        <div class="caja-video">
+            <iframe width="600" height="350" src="https://www.youtube.com/embed/jCG8NPm2WLg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="imagen-about-us"></iframe>
+    </div></center> 
+    </div>
+</section>
+<hr>
+<section class="caja-1">
+    <center>
+    <div class="caja-2">
+        <div class="contenido-texto-card">
+        <h2 class="titulo">E-grafía</h2>
+            <p><a href="https://www.publico.es/ahorro-consumo-responsable/como-regar-las-plantas-ahorrando-agua/">Cómo regar las plantas ahorrando el agua</a></p>
+            <p><a href="https://www.prensalibre.com/ciudades/el-95-del-agua-se-desperdicia-en-guatemala-debido-a-contaminacion-ambiental/#:~:text=Sydney%20Samuels%2C%20ministro%20de%20Ambiente,que%20sus%20aguas%20se%20desaprovechan.&text=de%20agua%20que%20cada%20a%C3%B1o,la%20agricultura%E2%80%9D%2C%20coment%C3%B3%20Samuels.">El 95% del agua se desperdicia en Guatemala debido a la contaminación ambiental</a></p>
+    </div>
+    </div>
+</center>
+</section>
+    </main>
+    <footer>
+        <div class="contenedor-footer">
+            <div class="content-foo">
+                <h4>Phone</h4>
+                <p class="parrafos">3809-2355</p>
+            </div>
+            <div class="content-foo">
+                <h4>Email</h4>
+                <p class="parrafos">lizzieestefania.vera@gmail.com</p>
+            </div>
+            <div class="content-foo">
+                <h4>Location</h4>
+                <p class="parrafos">Guatemala</p>
+            </div>
+        </div>
+        <hr>
+        <h2 class="titulo-final">&copy;Lizbeth Vera | Sofía Reyes | Lisseth Berganza | Adriana Anzueto</h2>
+    </footer>
+</body>
+</html>
